@@ -177,7 +177,7 @@ let bankAccount = new Array;
 for(let i=1;i<11;i++){
     bankAccount.push(i);
 }
-bankAccount = bankAccount.reduce((accum,currentVal) => accum+currentVal,0)
+bankAccount = bankAccount.reduce((accum,currentVal) => accum+currentVal,0);
 console.log(bankAccount);
 
 // 2.  You got a bonus! Your pay is now doubled each week. Write code
@@ -187,7 +187,7 @@ bankAccount = new Array;
 for(let i=1;i<101;i++){
     bankAccount.push(i*2);
 }
-bankAccount = bankAccount.reduce((accum,currentVal) => accum+currentVal,0)
+bankAccount = bankAccount.reduce((accum,currentVal) => accum+currentVal,0);
 console.log(bankAccount);
 
 /* III. Arrays & Control flow */
@@ -195,20 +195,31 @@ console.log(bankAccount);
 /* A. Talk about it: */
 
 // 1.  What are the things in an array called?
+// elements
+
 // 2.  Do Arrays guarantee those things will be in order?
+/* yes, each element is assigned an index and unless the indices are
+ manipulated, they are stagnant. */
+
 // 3.  What real-life thing could you model with an array?
+// the pickup queue for mobile orders at a restuarant
 
 /* B. Easy Does It */
 
-// 1.  Create an array that contains three quotes and store it in a variable called `quotes`
+// 1.  Create an array that contains three quotes and store it in
+// a variable called `quotes`
+const quotes = ['this is','a quote','so is this']
 
 /* C. Accessing elements */
-
 /* Given the following array `const randomThings = [1, 10, "Hello", true]` */
-
+const randomThings = [1, 10, "Hello", true]
+console.log(randomThings)
 // 1.  How do you access the 1st element in the array?
+console.log(randomThings[0])
 // 2.  Change the value of `"Hello"` to `"World"`
+console.log(randomThings[2]='World')
 // 3.  Check the value of the array to make sure it updated the array. How? Why, yes! `console.log()`;
+console.log(randomThings)
 
 /* D. Change values */
 
