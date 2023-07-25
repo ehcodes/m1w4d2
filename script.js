@@ -78,25 +78,33 @@ print `true` to the console */
   const d = 16;
   const e = 'Kevin';
 
-/*   console.log(a ** b);
-  console.log(c ** d);
-  console.log('Name' ** 'Name');
+  console.log(a < b);
+  console.log(c > d);
+  console.log('Name' === 'Name');
 
   // FOR THE NEXT TWO, USE ONLY && OR ||
-  console.log(true ** false);
-  console.log(false ** false ** false ** false ** false ** true);
-  console.log(false ** false)
-  console.log(e **\_ 'Kevin');
-  console.log(a ** b **\_ c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
-  console.log(a ** a **\_ d); // note: the answer is a simple arithmetic equation, not something "weird"
-  console.log(48 ** '48'); */
+  console.log(true || false);
+  console.log(false || false || false || false || false || true);
+  console.log(false == false)
+  console.log(e === 'Kevin');
+  console.log(a + b == c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
+  console.log(a * a == d); // note: the answer is a simple arithmetic equation, not something "weird"
+  console.log(48 == '48');
 
 /* D. The farm */
 
-// 1.  Declare a variable `animal`. Set it to be either "cow" or something else
-// 2.  Write code that will print out "mooooo" if the it is equal to `cow`
-// 3.  Change your code so that if the variable `animal` is anything other than a cow, it will print "Hey! You're not a cow."
-// 4.  Commit
+1.  Declare a variable `animal`. Set it to be either "cow" or something else
+let animal = 'cow';
+
+2.  Write code that will print out "mooooo" if the it is equal to `cow`
+3.  Change your code so that if the variable `animal` is anything other than a cow, it will print "Hey! You're not a cow."
+if(animal==='cow'){
+    console.log('mooooo');
+}else{
+    console.log(`Hey! You're not a cow.`)
+}
+
+4.  Commit
 
 /* E. Driver's Ed */
 
