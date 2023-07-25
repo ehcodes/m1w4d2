@@ -135,13 +135,12 @@ for(let i=10;i<401;i++){
 }
 // 3.  Write a loop that will print out every third number starting
 // with 12 and going no higher than 4000.
-for(let i=12;i<=4000;i++){
+for(let i=12; i<=4000; i++){
     if(i%3===0){
         console.log(i);
     }
 }
 /* B. Get even */
-
 // 1.  Print out the numbers that are within the range of 1 - 100
 for(let i=1;i<101;i++){
 // 2.  Adjust your code to add a message next to even numbers only 
@@ -222,41 +221,79 @@ console.log(randomThings[2]='World')
 console.log(randomThings)
 
 /* D. Change values */
-
 /* Given the following array `const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]` */
-
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
 // 1.  What would you write to access the 3rd element of the array?
+console.log(ourClass[2]);
+
 // 2.  Change the value of "Github" to "Octocat"
+console.log(ourClass[4]='Octocat');
+
 // 3.  Add a new element, "Cloud City" to the array
+ourClass.push('Cloud City')
+console.log(ourClass);
 
 /* E. Mix It Up */
 /* > Note: You don't really need `.splice()` for these. You _could_ use it, but there are simpler array methods that are more appropriate. */
 /* Given the following array: `const myArray = [5, 10, 500, 20]` */
+const myArray = [5, 10, 500, 20]
+// 1.  Add the string `"Aegon"` to the end of the array.
+// Add another string of your choice to the end of the array.
+myArray.push(`Aegon`,`Brisinger`);
+console.log(myArray);
 
-// 1.  Add the string `"Aegon"` to the end of the array. Add another string of your choice to the end of the array.
 // 2.  Remove the `5` from the beginning of the array.
+myArray.shift();
+console.log(myArray);
+
 // 3.  Add the string `"Bob Marley"` to the beginning of the array.
+myArray.unshift("Bob Marley");
+console.log(myArray);
+
 // 4.  Remove the string of your choice from the end of the array.
-// 5.  Reverse this array using `Array.prototype.reverse()`. Did you mutate the array? What does _mutate_ mean? Did the `.reverse()` method return anything?
+myArray.pop();
+console.log(myArray);
+
+// 5.  Reverse this array using `Array.prototype.reverse()`.
+// Did you mutate the array? What does _mutate_ mean?
+// Did the `.reverse()` method return anything?
+/* the reverse method returned the original Array, reassigned 
+with it's element's in reverse order. */
+myArray.reverse();
+console.log(myArray);
 
 /* F. Biggie Smalls */
 
 /* Create a variable that contains an integer.
 Write an `if ... else` statement that:
-
-1.  `console.log()`s "little number" if the number is entered is less than **100**
-2.  `console.log()`s `big number` if the number is greater than or equal to 100. */
+1.  `console.log()`s "little number" if the number is entered
+is less than **100**
+2.  `console.log()`s `big number` if the number is greater
+than or equal to 100. */
+let bigSmall = 55;
+if(bigSmall < 100){
+    console.log(`little number`);
+}else{
+    console.log(`big number`);
+}
 
 /* G. Monkey in the Middle */
-
 /* Write an `if ... else if ... else` statement: */
-
-// 1.  `console.log()` `little number` if the number entered is less than **5**.
+// 1.  `console.log()` `little number` if the number entered is
+// less than **5**.
+if(bigSmall < 5){
+    console.log(`little number`);
 // 2.  If the number entered is more than 10, log `big number`.
+}else if(bigSmall > 10){
+    console.log(`big number`);
 // 3.  Otherwise, log "monkey".
+}else{
+    console.log(`monkey`);
+}
 
 /* H. What's in Your Closet? */
-// Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript.
+// Below, we've given you examples of Kristyn and Thom's closets
+// modeled as data in JavaScript.
 
     const kristynsCloset = [
       "left shoe",
@@ -268,35 +305,61 @@ Write an `if ... else` statement that:
       "marshmallow peeps"
     ];
 
-    // Thom's closet is more complicated. Check out this nested data structure!!
-    const thomsCloset = [
-      [
+// 1.  What's Kristyn wearing today? Using bracket notation to access
+// items in `kristynsCloset`, log the sentence "Kristyn is rocking that "
+// + _the third item in Kristyn's closet_ + " today!" to the console.
+console.log(`Kristyn is rocking that ${kristynsCloset[2]} today!`);
+
+// 2.  Kristyn just bought some sweet shades! Add `"raybans"` to her
+// closet **after `"yellow knit hat"`.**
+kristynsCloset.splice(6,0,"raybans");
+console.log(kristynsCloset);
+
+// 3.  Kristyn spilled coffee on her hat... modify this item to read
+// `"stained knit hat"` instead of yellow.
+kristynsCloset[5]="stained knit hat";
+console.log(kristynsCloset);
+
+// Thom's closet is more complicated. Check out this nested
+// data structure!!
+const thomsCloset = [
+    [
         // These are Thom's shirts
         "grey button-up",
         "dark grey button-up",
         "light blue button-up",
         "blue button-up",
-      ],[
+    ],[
         // These are Thom's pants
         "grey jeans",
         "jeans",
         "PJs"
-      ],[
+    ],[
         // Thom's accessories
         "wool mittens",
         "wool scarf",
         "raybans"
-      ]
-    ];
+    ]
+];
 
-// 1.  What's Kristyn wearing today? Using bracket notation to access items in `kristynsCloset`, log the sentence "Kristyn is rocking that " + _the third item in Kristyn's closet_ + " today!" to the console.
-// 2.  Kristyn just bought some sweet shades! Add `"raybans"` to her closet **after `"yellow knit hat"`.**
-// 3.  Kristyn spilled coffee on her hat... modify this item to read `"stained knit hat"` instead of yellow.
-// 4.  Put together an outfit for Thom! Using **bracket notation**, access the first element in Thom's `shirts` array.
+// 4.  Put together an outfit for Thom! Using **bracket notation**,
+// access the first element in Thom's `shirts` array.
+console.log(thomsCloset[0][0])
+
 // 5.  In the same way, access one item from Thom's pants array.
+console.log(thomsCloset[1][0])
+
 // 6.  Access one item from Thom's accessories array.
-// 7.  Log a sentence about what Thom's wearing. Example: `"Thom is looking fierce in a grey button-up, jeans and wool scarf!"`
-// 8.  Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to `Footie Pajamas`.
+console.log(thomsCloset[2][0])
+
+// 7.  Log a sentence about what Thom's wearing. Example:
+// `"Thom is looking fierce in a grey button-up, jeans and wool scarf!"`
+console.log(`Thom is looking fierce in a ${thomsCloset[0][1]}, ${thomsCloset[1][0]} and ${thomsCloset[2][2]}.`)
+
+// 8.  Get more specific about what kind of PJs Thom's wearing this
+// winter. Modify the name of his PJ pants to `Footie Pajamas`.
+thomsCloset[1][2]=`Footie Pajamas`
+console.log(thomsCloset[1])
 
 /* IV. Functions */
 
