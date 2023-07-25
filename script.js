@@ -1,35 +1,70 @@
 /* A. Q + A */
 
 // 1.  How do we assign a value to a variable?
+
 /* By using an equal sign after declaring the variable: 
 const variableDeclared = 'variable value' */
 
 // 2.  How do we change the value of a variable?
 
+/* the value of a variable can be changed with an equal 
+symbol followed by the new value EX: oldVariable = 'new value' */
+
 // 3.  How do we assign an existing variable to a new variable?
+
+/* an existing variable can be assigned to a new variable by declaring 
+the variable and then using the equals symbol to assign it to the old 
+variable. EX: let newVariable = oldVariable */
 
 // 4.  Remind me, what are `declare`, `assign`, and `define`?
 
+/* declare = identify a variable (no value passed)
+    ex: let thisVariable;
+assign = provide a value to a declared variable
+    ex: thisVariable = 'this value'
+define = declare and assign a variable
+    ex: let thissVariable = 'this value' */
+
 // 5.  What is pseudocoding and why should you do it?
 
+/* pseudo code is the process of thinking about what your 
+code needs to do and writing it out in plain english before 
+writing it out in a progroamming language. */
+
 // 6.  What percentage of time should be spent thinking about how you're going to solve a problem vs actually typing in code to solve it?
+
+/* At least 50% of your time will be spent on thinking about the solution 
+before actually coding it out */
 
 /* B. Strings: For all other questions that involve writing 
 code, you can solve them via the following instructions. */
 
 // 1.  Create a variable called `firstVariable`
+let firstVariable;
 
 // 2.  Assign it the value of the string `"Hello World"`
+firstVariable = `Hello World`;
 
 // 3.  Change the value of this variable to some number
+firstVariable = 1;
 
 // 4.  Store the value of `firstVariable` in a new variable called `secondVariable`
+let secondVariable = firstVariable;
 
 // 5.  Change the value of `secondVariable` to any string.
+secondVariable = 'any string'
 
 // 6.  What is the value of `firstVariable`?
+1
+console.log(firstVariable)
 
-// 7.  Create a variable called `yourName` and set it equal to your name as a string. Then, write an expression that takes the string "Hello, my name is " and the variable `yourName` so that it returns a new string with them concatenated.
+// 7.  Create a variable called `yourName` and set it equal 
+// to your name as a string. Then, write an expression that 
+// takes the string "Hello, my name is " and the variable 
+// `yourName` so that it returns a new string with them 
+// concatenated.
+const yourName = 'Engrid'
+console.log(`Hello, my name is ${yourName}.`)
 
 /* C. Booleans: Using the provided variable definitions, 
 replace the blanks so that all log statements print `true` 
