@@ -435,15 +435,16 @@ console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 // If all numbers are the same, it doesn't matter which one is returned.
 // If the two largest numbers are the same, one of them should be returned.
 // Be sure to test it with larger values in each of the three locations.
+/* Math.max isn't allowed! */
 const maxOfThree = (arg1,arg2,arg3)=>{
     let arr = [arg1,arg2,arg3];
-    return Math.floor(Math.max(...arr));
+    let max = arr[0]
+    arr.forEach(el=>{
+        max < el ? max = el : el = el
+    })
+    return max;
 }
 console.log(maxOfThree(6, 9, 1));
-// Did you use Google and find `Math.max()`? If so, great job! Very 
-// resourceful—keep looking stuff up! However, for this particular 
-//question, we need you to submit a solution that **does not** use
-// `Math.max()`.
 
 /* H. `printLongestWord` */
 // Write a function `printLongestWord` that accepts a single argument,
@@ -568,19 +569,24 @@ for(let i=0;i<user.purchased.length;i++){
 /* G. Functions can operate on objects */
 
 // 1.  Write a single function `updateUser` that takes no parameters. When the function is run, it should:
+function updateUser(){
 // 2.  it should increment the user's age by 1
+    user.age++;
 // 3.  make the user's name uppercase
-
+    user.name = user.name.toUpperCase();
+}
+updateUser();
 // The function does not need a `return` statement, it will merely modify the user object.
+console.log(user);
 
 /* 2.  Write a function `oldAndLoud` that performs the exact same tasks as `updateUser`, but instead of hard-coding it to only work on our `user` object, make it take a parameter `person`, and have it modify the object that is passed in as an argument when the function is called. Call your `oldAndLoud` function with `user` as the argument. */
 
-
-
-
-
-
-
+function oldAndLoud(person){
+    person.age++;
+    person.name = person.name.toUpperCase();
+}
+oldAndLoud(user);
+console.log(user);
 
 /* Requirements Complete! Hungry for More?
 
